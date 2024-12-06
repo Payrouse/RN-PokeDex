@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Account from "../screens/AccountScreen";
 
 const Stack = createStackNavigator();
-export default function FavoritesNavigation() {
+export default function AccountNavigation() {
   return (
     <>
       <Stack.Navigator>
