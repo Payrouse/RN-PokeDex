@@ -60,7 +60,6 @@ function renderPokeball(focused) {
         top: -15,
         transform: [{ scale: focused ? 1.2 : 1 }], // Aumenta el tamaño cuando está activo
         opacity: focused ? 1 : 0.6, // Disminuye la opacidad cuando está inactivo
-        transform: [{ rotate: focused ? "45deg" : "0deg" }],
       }}
     />
   );

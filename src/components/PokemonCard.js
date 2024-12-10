@@ -7,17 +7,19 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { capitalize } from "lodash";
+import { useNavigation } from "@react-navigation/native";
 import getColorByPokemonType from "../utils/getColorByPokemonType";
 
 export default function PokemonCard(props) {
   const { pokemon } = props;
+  const navigation = useNavigation();
 
   const pokemonColor = getColorByPokemonType(pokemon.type);
   const bgStyles = { backgroundColor: pokemonColor, ...styles.bgStyles };
 
   const goToPokemon = () => {
-    console.log(`Vamos al pokemon: ${pokemon.name}`);
-    console.log(pokemon);
+    console.log(props);
+    navigation.navigate("PokemonScreen", { id: pokemon.id });
   };
 
   return (
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
   number: {
     position: "absolute",
     right: 10,
-    top: 15,
+    top: 10,
     color: "#fff",
     fontSize: 11,
   },
@@ -62,6 +64,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
     fontSize: 15,
+    paddingTop: 10,
   },
   image: {
     position: "absolute",
