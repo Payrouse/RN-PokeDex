@@ -20,7 +20,7 @@ export default function PokedexNavigation() {
           component={Pokemon}
           options={{
             title: "",
-            headerBackTitle: "Volver",
+            headerBackTitle: "Back",
             headerTransparent: true,
           }}
         />
